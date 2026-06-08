@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SISTEMA DE ALUNOS</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+    href="ChatGPT Image 6 de jun. de 2026, 21_05_40.png "width="300px" 
+    type="image/x-icon">
+
+</head>
+
+<body>
+
+    <header>
+        <img src="ChatGPT Image 6 de jun. de 2026, 21_05_40.png" alt="logo" width="100px">
+        <center><h1>SISTEMA DE CADASTRO ESCOLAR</h1></center>
+
+        <nav>
+            <a href="#">Cadastrar</a>
+            <a href="#">Listar Alunos</a>
+            <a href="#" onclick="localStorage.clear(); location.reload();">
+                Limpar Dados
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h2>Cadastro de Alunos</h2>
+        <p>Preencha os dados do aluno para cadastrar</p>
+
+        <form id="formAluno">
+
+            <div class="form-grid">
+
+                <div>
+                    <label for="id">R.A do Aluno</label>
+                    <input type="number" id="id" required>
+                </div>
+
+                <div>
+                    <label for="nome">Nome do Aluno</label>
+                    <input type="text" id="nome" required>
+                </div>
+
+                <div>
+                    <label for="nota1">Nota 1</label>
+                    <input type="number" step="0.01" id="nota1" required>
+                </div>
+
+                <div>
+                    <label for="nota2">Nota 2</label>
+                    <input type="number" step="0.01" id="nota2" required>
+                </div>
+
+            </div>
+
+            <button type="submit">
+                💾 Cadastrar Aluno
+            </button>
+
+
+        </form>
+
+        <div class="pesquisa">
+    <input
+        type="text"
+        id="pesquisaAluno"
+        placeholder="🔍 Pesquisar aluno pelo nome..."
+    >
+</div>
+
+        <section class="lista">
+
+            <h2>👥 Lista de Alunos Cadastrados</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Média</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaAlunos">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <footer>
+        Sistema de Alunos © 2026
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
